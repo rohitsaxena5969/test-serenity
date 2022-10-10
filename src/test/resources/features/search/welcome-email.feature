@@ -11,4 +11,4 @@ Feature: Welcome email 1 is delivered
     When Customers and policies are found in CDH
     And Customer and policy files are removed from SFTP
     And Campaign is run
-    Then Email status is "DeliverHold" in CDH
+    Then Email status is "Delivered" in CDH

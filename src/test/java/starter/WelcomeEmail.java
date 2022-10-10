@@ -7,7 +7,6 @@ import com.example.sftp.SFTPConnect;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.SftpException;
 import com.opencsv.exceptions.CsvException;
-import io.cucumber.core.plugin.SerenityReporter;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
@@ -236,7 +235,7 @@ public class WelcomeEmail {
                     .get(new URL(ih_url.get(env) + customerId))
                     .then()
                     .extract().response().body().path("OfferHistory.findAll {" +
-                            "it -> (it.Outcome == '" + status  +"' && it.InteractionID == '" + interactionId +"')" +
+                            "it -> (it.Outcome == '" + status  +"')" +
                             "}.InteractionID");
 
             System.out.println("list " + list);
